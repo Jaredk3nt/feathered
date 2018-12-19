@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import feather from 'feather-icons';
 import Parser from 'html-react-parser';
 
