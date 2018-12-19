@@ -1,6 +1,6 @@
 {
   "name": "feathered",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A dynamic React icon component based on Feather Icons without dangerouslySetInnerHTML",
   "main": "dist/index.js",
   "homepage": "https://github.com/Jaredk3nt/feathered",
@@ -9,7 +9,7 @@
     "url": "https://github.com/Jaredk3nt/feathered"
   },
   "scripts": {
-    "prepublish": "npm run clean; npm run build",
+    "prepare": "npm run clean; npm run build",
     "build": "babel src -d dist",
     "clean": "rm -r dist"
   },

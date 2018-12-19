@@ -6,6 +6,7 @@ function Feather({
     icon,
     className,
     color,
+    size,
     width,
     height,
     strokeWidth,
@@ -17,8 +18,10 @@ function Feather({
         return Parser(feather.icons[icon].toSvg({
             ...className && { class: className },
             ...color && { color },
-            ...width && { width },
-            ...height && { height },
+            ...size && {
+                width: width || size,
+                height: height || size,
+            },
             ...strokeWidth && { "stroke-width": strokeWidth },
             ...linecap && { "stroke-linecap": linecap },
             ...linejoin && { "stroke-linejoin": linejoin },
@@ -32,6 +35,7 @@ Feather.propTypes = {
     icon: PropTypes.string.isRequired,
     className: PropTypes.string,
     color: PropTypes.string,
+    size: PropTypes.number,
     width: PropTypes.number,
     height: PropTypes.number,
     strokeWidth: PropTypes.number,
